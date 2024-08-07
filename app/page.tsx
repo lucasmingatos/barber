@@ -12,10 +12,8 @@ import BookingItem from "./_components/booking-item"
 //RECEBER AGENDAMENTOS COMO PROP FUTURAMENTE
 
 const Home = async () => {
-
-  //instanciar banco
   const barbershops = await db.barbershop.findMany({})
-  const pouparBarbershops = await db.barbershop.findMany({
+  const popularBarbershops = await db.barbershop.findMany({
     orderBy: {
       name: "desc",
     }
@@ -75,7 +73,7 @@ const Home = async () => {
         {/*populares*/}
         <h2 className="m-3 mt-6 uppercase text-gray-400 font-bold text-xs">Populares</h2>
         <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
-          {pouparBarbershops.map((barbershop) => (
+          {popularBarbershops.map((barbershop) => (
             <BarbershopItem key={barbershop.id} barbershop={barbershop} />
           ))}
         </div>
