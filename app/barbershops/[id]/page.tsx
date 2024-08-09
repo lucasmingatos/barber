@@ -6,7 +6,6 @@ import Link from "next/link"
 import { notFound } from "next/navigation";
 import ServiceItem from "@/app/_components/service-item";
 import PhoneItem from "@/app/_components/phone-item";
-import SidebarButton from "@/app/_components/sidebar-sheet";
 import { Sheet, SheetTrigger } from "@/app/_components/ui/sheet";
 import SidebarSheet from "@/app/_components/sidebar-sheet";
 
